@@ -30,6 +30,23 @@ export default function HeroSlider({
     setIndex(((i % len) + len) % len);
   }, [len]);
 
+  // Preload adjacent slides for smoother transitions
+  useEffect(() => {
+    const nextIdx = (index + 1) % len;
+    const prevIdx = (index - 1 + len) % len;
+    
+    const preloadImage = (src: string) => {
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = src;
+      document.head.appendChild(link);
+    };
+
+    preloadImage(slides[nextIdx].src);
+    preloadImage(slides[prevIdx].src);
+  }, [index, len, slides]);
+
   useEffect(() => {
     if (paused) return;
     const t = window.setInterval(() => {
@@ -68,25 +85,34 @@ export default function HeroSlider({
         style={{ transform: `translateX(-${index * 100}%)` }}
         id={`${id}-track`}
       >
-        {slides.map((slide, i) => (
-          <div className="hero-slider__slide" key={`${slide.label}-${i}`} aria-hidden={i !== index}>
-            <img
-              src={slide.src}
-              alt={slide.alt}
-              width={1400}
-              height={1050}
-              loading={i === 0 ? "eager" : "lazy"}
-              fetchPriority={i === 0 ? "high" : undefined}
-              decoding="async"
-            />
-            {!immersive && (
-              <div className="hero-slider__caption">
-                <strong>{slide.label}</strong>
-                <span>{slide.blurb}</span>
-              </div>
-            )}
-          </div>
-        ))}
+        {slides.map((slide, i) => {
+          const isVisible = i === index;
+          const isAdjacent = Math.abs(i - index) === 1 || (i === 0 && index === len - 1) || (i === len - 1 && index === 0);
+          
+          return (
+            <div 
+              className="hero-slider__slide" 
+              key={`${slide.label}-${i}`} 
+              aria-hidden={!isVisible}
+            >
+              <img
+                src={slide.src}
+                alt={slide.alt}
+                width={1400}
+                height={1050}
+                loading={i === 0 || isAdjacent ? "eager" : "lazy"}
+                fetchPriority={i === 0 ? "high" : isAdjacent ? "low" : undefined}
+                decoding="async"
+              />
+              {!immersive && (
+                <div className="hero-slider__caption">
+                  <strong>{slide.label}</strong>
+                  <span>{slide.blurb}</span>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
 
       <button

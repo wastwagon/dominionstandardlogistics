@@ -26,15 +26,18 @@ export default function HeroSlider({
     [len],
   );
 
-  const goTo = useCallback((i: number) => {
-    setIndex(((i % len) + len) % len);
-  }, [len]);
+  const goTo = useCallback(
+    (i: number) => {
+      setIndex(((i % len) + len) % len);
+    },
+    [len],
+  );
 
   // Preload adjacent slides for smoother transitions
   useEffect(() => {
     const nextIdx = (index + 1) % len;
     const prevIdx = (index - 1 + len) % len;
-    
+
     const preloadImage = (src: string) => {
       const link = document.createElement("link");
       link.rel = "preload";
@@ -87,12 +90,15 @@ export default function HeroSlider({
       >
         {slides.map((slide, i) => {
           const isVisible = i === index;
-          const isAdjacent = Math.abs(i - index) === 1 || (i === 0 && index === len - 1) || (i === len - 1 && index === 0);
-          
+          const isAdjacent =
+            Math.abs(i - index) === 1 ||
+            (i === 0 && index === len - 1) ||
+            (i === len - 1 && index === 0);
+
           return (
-            <div 
-              className="hero-slider__slide" 
-              key={`${slide.label}-${i}`} 
+            <div
+              className="hero-slider__slide"
+              key={`${slide.label}-${i}`}
               aria-hidden={!isVisible}
             >
               <img
@@ -101,7 +107,9 @@ export default function HeroSlider({
                 width={1400}
                 height={1050}
                 loading={i === 0 || isAdjacent ? "eager" : "lazy"}
-                fetchPriority={i === 0 ? "high" : isAdjacent ? "low" : undefined}
+                fetchPriority={
+                  i === 0 ? "high" : isAdjacent ? "low" : undefined
+                }
                 decoding="async"
               />
               {!immersive && (
@@ -150,7 +158,11 @@ export default function HeroSlider({
         </svg>
       </button>
 
-      <div className="hero-slider__dots" role="tablist" aria-label="Slide navigation">
+      <div
+        className="hero-slider__dots"
+        role="tablist"
+        aria-label="Slide navigation"
+      >
         {slides.map((_, i) => (
           <button
             key={i}

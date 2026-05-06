@@ -14,10 +14,7 @@ export default defineConfig({
         speed: 4,
       },
       svgo: {
-        plugins: [
-          { name: "removeViewBox" },
-          { name: "removeEmptyAttrs" },
-        ],
+        plugins: [{ name: "removeViewBox" }, { name: "removeEmptyAttrs" }],
       },
     }),
   ],

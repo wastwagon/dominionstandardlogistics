@@ -2,10 +2,10 @@
  * Unsplash (https://unsplash.com/license) — free to use; hotlinking supported.
  */
 
-const SITE_PHOTO = new URL(
-  "../../WhatsApp Image 2026-05-01 at 11.35.35.jpeg",
-  import.meta.url,
-).href;
+// const SITE_PHOTO = new URL(
+//   "../../WhatsApp Image 2026-05-01 at 11.35.35.jpeg",
+//   import.meta.url,
+// ).href;
 
 export const IMAGES = {
   sea: {

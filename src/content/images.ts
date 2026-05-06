@@ -9,29 +9,29 @@ const SITE_PHOTO = new URL(
 
 export const IMAGES = {
   sea: {
-    src: SITE_PHOTO,
+    src: "/assets/seafreight.jpg",
     alt: "Harbor and maritime freight",
   },
   air: {
-    src: SITE_PHOTO,
+    src: "/assets/air-freight.jpg",
     alt: "Air cargo and airport freight",
   },
   land: {
-    src: SITE_PHOTO,
+    src: "/assets/land-freight.jpg",
     alt: "Highway trucking and road freight",
   },
   warehouse: {
-    src: SITE_PHOTO,
+    src: "/assets/warehouse.jpg",
     alt: "Warehouse and distribution operations",
   },
   /** Import / export & customs context */
   customs: {
-    src: SITE_PHOTO,
+    src: "/assets/import.jpg",
     alt: "International cargo handling",
   },
   /** Freight forwarding — coordination & documentation */
   forwarding: {
-    src: SITE_PHOTO,
+    src: "/assets/freight-forwarding.jpg",
     alt: "Planning and logistics coordination",
   },
 } as const;
@@ -39,31 +39,31 @@ export const IMAGES = {
 /** Hero carousel slides */
 export const HERO_SLIDES = [
   {
-    src: SITE_PHOTO,
+    src: "/assets/hero1.jpg",
     alt: "Global map and digital connectivity for logistics networks",
     label: "Global connectivity",
     blurb: "Coordinate shipments across regions with clear milestones",
   },
   {
-    src: SITE_PHOTO,
+    src: "/assets/hero2.jpg",
     alt: "Port operations and container handling",
     label: "Ocean freight",
     blurb: "FCL, LCL, and port-to-port programmes",
   },
   {
-    src: SITE_PHOTO,
+    src: "/assets/hero3.jpg",
     alt: "Aircraft loading cargo",
     label: "Air cargo",
     blurb: "Time-definite lift via carrier networks",
   },
   {
-    src: SITE_PHOTO,
+    src: "/assets/hero4.jpg",
     alt: "Commercial trucks on highway",
     label: "Road transport",
     blurb: "FTL & LTL with tracking and routing",
   },
   {
-    src: SITE_PHOTO,
+    src: "/assets/hero5.jpg",
     alt: "Modern warehouse interior",
     label: "Warehousing",
     blurb: "Storage and inventory aligned to your network",
@@ -81,34 +81,34 @@ export const SERVICE_CARD_IMAGES = [
 ] as const;
 
 export const ABOUT_PANEL_IMAGE = {
-  src: SITE_PHOTO,
+  src: "/assets/land.jpg",
   alt: "Fleet and road freight operations",
 } as const;
 
 /** “Reasons to work with us” — six distinct Unsplash scenes */
 export const WHY_CARD_IMAGES = [
   {
-    src: SITE_PHOTO,
+    src: "/assets/global.jpg",
     alt: "Global logistics connectivity",
   },
   {
-    src: SITE_PHOTO,
+    src: "/assets/special.jpg",
     alt: "Shipping containers at port",
   },
   {
-    src: SITE_PHOTO,
+    src: "/assets/air-freight.jpg",
     alt: "Air freight operations",
   },
   {
-    src: SITE_PHOTO,
+    src: "/assets/beskpoke.jpg",
     alt: "Road transport",
   },
   {
-    src: SITE_PHOTO,
+    src: "/assets/warehouse.jpg",
     alt: "Warehouse operations",
   },
   {
-    src: SITE_PHOTO,
+    src: "/assets/trust.jpg",
     alt: "Logistics and supply chain",
   },
 ] as const;

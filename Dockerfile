@@ -3,7 +3,7 @@
 FROM node:22-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json* ./
-RUN apk add --no-cache --virtual .build-deps build-base autoconf automake libtool pkgconf python3 make && \
+RUN apk add --no-cache --virtual .build-deps build-base autoconf automake libtool pkgconf python3 make zlib-dev libpng-dev && \
   npm ci && \
   apk del .build-deps
 COPY . .

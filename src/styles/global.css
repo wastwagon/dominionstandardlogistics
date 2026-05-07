@@ -10,10 +10,10 @@
   --ink-soft: #1e3a5f;
   --ink-muted: #4a657f;
   --ink-subtle: #6b8299;
-  --brand: #0b4f8c;
-  --brand-deep: #07365f;
-  --brand-soft: #e3eef8;
-  --brand-tint: #cfe2f5;
+  --brand: #c79a2b;
+  --brand-deep: #9b7417;
+  --brand-soft: #f8edcf;
+  --brand-tint: #f2dfaa;
   --accent: #0d7a6f;
   --accent-soft: #d9f3ef;
   --accent-warm: #c2410c;
@@ -1376,7 +1376,6 @@ section {
   height: 48px;
   width: auto;
   margin-bottom: 1rem;
-  filter: brightness(1.05);
 }
 
 .footer-brand p {

@@ -52,52 +52,34 @@ export default function Contact() {
 
           <div className="contact-form">
             <h2 style={{ fontFamily: "var(--font-display)", fontSize: "1.35rem", margin: "0 0 1rem" }}>
-              Send a message
+              Request a quote
             </h2>
-            <form action={`https://formsubmit.co/${SITE.email}`} method="POST">
-              <input type="hidden" name="_subject" value="Dominion Standard Logistics — Website enquiry" />
-              <input type="hidden" name="_template" value="table" />
-              <input
-                type="text"
-                name="_honey"
-                style={{ display: "none" }}
-                tabIndex={-1}
-                autoComplete="off"
-                aria-hidden
-              />
-              <div className="form-row two">
-                <div>
-                  <label htmlFor="first">First name</label>
-                  <input id="first" name="first_name" type="text" autoComplete="given-name" />
-                </div>
-                <div>
-                  <label htmlFor="last">Last name</label>
-                  <input id="last" name="last_name" type="text" autoComplete="family-name" />
-                </div>
-              </div>
-              <label htmlFor="email">
-                Email address <span aria-hidden="true">*</span>
-              </label>
-              <input id="email" name="email" type="email" required autoComplete="email" />
-              <label htmlFor="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" autoComplete="tel" />
-              <label htmlFor="reason">Reason for enquiry</label>
-              <select id="reason" name="reason" defaultValue="General">
-                <option value="General">General</option>
-                <option value="Shipment">Shipment</option>
-                <option value="Support">Support</option>
-              </select>
-              <label htmlFor="message">
-                Message <span aria-hidden="true">*</span>
-              </label>
-              <textarea id="message" name="message" required />
-              <button className="btn btn-primary" type="submit" style={{ width: "100%" }}>
-                Send message
-              </button>
-            </form>
-            <p className="form-note">
-              Submissions are delivered by FormSubmit (third-party). On first use you may receive a
-              confirmation email to authorize delivery—alternatively email us directly.
+            <p className="form-note" style={{ marginBottom: "1rem" }}>
+              For pricing and shipment bookings, call or email us directly.
+            </p>
+            <p style={{ display: "flex", flexDirection: "column", gap: ".65rem", marginBottom: "1.25rem" }}>
+              <a className="btn btn-primary" href={`tel:${SITE.phoneTel}`}>
+                Call {SITE.phoneDisplay}
+              </a>
+              <a className="btn btn-primary" href={`tel:${SITE.phoneTelSecondary}`}>
+                Call {SITE.phoneDisplaySecondary}
+              </a>
+              <a className="btn btn-ghost" href={`mailto:${SITE.email}`}>
+                Email {SITE.email}
+              </a>
+            </p>
+
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "1.35rem", margin: "0 0 1rem" }}>
+              Contact us
+            </h2>
+            <p className="form-note" style={{ marginBottom: "1rem" }}>
+              For general enquiries or support, use the same phone and email contacts.
+            </p>
+            <p style={{ margin: 0 }}>
+              <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a> /{" "}
+              <a href={`tel:${SITE.phoneTelSecondary}`}>{SITE.phoneDisplaySecondary}</a>
+              <br />
+              <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
             </p>
           </div>
         </div>

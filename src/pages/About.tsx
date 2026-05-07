@@ -212,8 +212,11 @@ export default function About() {
         <div className="container">
           <h2>Ready to simplify your logistics?</h2>
           <Link className="btn btn-primary" to="/contact">
-            Speak with our team
+            Request a quote
           </Link>
+          <a className="btn btn-ghost" href={`tel:${SITE.phoneTel}`} style={{ marginLeft: ".75rem" }}>
+            Call now
+          </a>
         </div>
       </section>
     </>

@@ -97,7 +97,7 @@ export default function Home() {
               </p>
               <div className="hero__actions hero__actions--immersive">
                 <Link className="btn-hero-solid" to="/contact">
-                  Get a free quote
+                  Request a quote
                 </Link>
                 <Link className="btn-hero-outline" to="/services">
                   Explore services
@@ -166,7 +166,7 @@ export default function Home() {
                 shipments, aligned with your schedules and budgets.
               </p>
               <Link className="btn btn-primary" to="/contact">
-                Get a free quote
+                Request a quote
               </Link>
             </article>
             <article className="mode-card">
@@ -186,7 +186,7 @@ export default function Home() {
                 carriers and tailored routing options.
               </p>
               <Link className="btn btn-primary" to="/contact">
-                Get a free quote
+                Request a quote
               </Link>
             </article>
             <article className="mode-card">
@@ -206,7 +206,7 @@ export default function Home() {
                 tracking, and route optimisation.
               </p>
               <Link className="btn btn-primary" to="/contact">
-                Get a free quote
+                Request a quote
               </Link>
             </article>
           </div>
@@ -364,8 +364,11 @@ export default function Home() {
             committed to delivering the highest quality service.
           </h2>
           <Link className="btn btn-primary" to="/contact">
-            Contact us today
+            Request a quote
           </Link>
+          <a className="btn btn-ghost" href={`tel:${SITE.phoneTel}`} style={{ marginLeft: ".75rem" }}>
+            Call now
+          </a>
         </div>
       </section>
     </>

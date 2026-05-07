@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { SERVICE_CARD_IMAGES, WHY_CARD_IMAGES } from "../content/images";
+import { SITE } from "../content/site";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 const SERVICES_DETAIL = [
@@ -141,6 +142,9 @@ export default function Services() {
           <Link className="btn btn-primary" to="/contact">
             Request a quote
           </Link>
+          <a className="btn btn-ghost" href={`tel:${SITE.phoneTel}`} style={{ marginLeft: ".75rem" }}>
+            Call now
+          </a>
         </div>
       </section>
     </>

@@ -1,15 +1,15 @@
 /* Dominion Standard Logistics — professional logistics theme (light, corporate) */
 
 :root {
-  --canvas: #f0f4f9;
-  --canvas-warm: #eef2f7;
+  --canvas: #f6f2e9;
+  --canvas-warm: #f3ede1;
   --surface: #ffffff;
-  --surface-muted: #f7fafc;
-  --surface-elevated: #fbfdff;
+  --surface-muted: #faf6ef;
+  --surface-elevated: #fffdf9;
   --ink: #0c1a2e;
-  --ink-soft: #1e3a5f;
-  --ink-muted: #4a657f;
-  --ink-subtle: #6b8299;
+  --ink-soft: #3e3322;
+  --ink-muted: #675845;
+  --ink-subtle: #857563;
   --brand: #c79a2b;
   --brand-deep: #9b7417;
   --brand-soft: #f8edcf;
@@ -17,8 +17,8 @@
   --accent: #0d7a6f;
   --accent-soft: #d9f3ef;
   --accent-warm: #c2410c;
-  --border: #d4e0ed;
-  --border-strong: #b8ccdf;
+  --border: #e4d9c1;
+  --border-strong: #cfbe98;
   --shadow-xs: 0 1px 2px rgba(12, 26, 46, 0.05);
   --shadow-sm: 0 2px 8px rgba(12, 26, 46, 0.06);
   --shadow-md: 0 12px 40px rgba(12, 26, 46, 0.08);
@@ -101,7 +101,7 @@ a:hover {
 
 .site-header__top {
   min-height: var(--header-top-h);
-  background: linear-gradient(90deg, #061b30 0%, #0a2744 50%, #061b30 100%);
+  background: linear-gradient(90deg, #3d2c10 0%, #6f541e 50%, #3d2c10 100%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -237,7 +237,7 @@ a:hover {
 
 .nav-links a:hover {
   color: var(--surface-elevated);
-  border-bottom-color: rgba(11, 79, 140, 0.35);
+  border-bottom-color: rgba(199, 154, 43, 0.45);
 }
 
 .nav-links a[aria-current="page"] {
@@ -1355,7 +1355,7 @@ section {
 /* Footer */
 .site-footer {
   padding: 3rem 0 2rem;
-  background: linear-gradient(180deg, #0a2540 0%, #061a2e 100%);
+  background: linear-gradient(180deg, #3b2a0f 0%, #21180b 100%);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   color: #e8eef5;
 }

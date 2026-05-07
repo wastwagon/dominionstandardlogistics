@@ -55,6 +55,10 @@ export default function Header() {
               {SITE.phoneDisplay}
             </a>
             <span className="site-header__reach-sep" aria-hidden />
+            <a className="site-header__reach-link" href={`tel:${SITE.phoneTelSecondary}`}>
+              {SITE.phoneDisplaySecondary}
+            </a>
+            <span className="site-header__reach-sep" aria-hidden />
             <a
               className="site-header__reach-link site-header__reach-link--muted"
               href={`mailto:${SITE.email}`}
@@ -94,7 +98,7 @@ export default function Header() {
         <div className="container site-header__main-inner">
           <NavLink className="logo-link" to="/" end>
             <img
-              src="/assets/logo.svg"
+              src="/assets/newlogodominiologistics.png"
               width={280}
               height={73}
               alt="Dominion Standard Logistics Ltd"

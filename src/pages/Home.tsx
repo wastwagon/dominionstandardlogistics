@@ -117,8 +117,9 @@ export default function Home() {
             <div className="hero__trust-divider" aria-hidden />
             <div className="hero__trust-block">
               <span className="hero__trust-label">Call us</span>
-              <a className="hero__trust-phone" href={`tel:${SITE.phoneTel}`}>
-                {SITE.phoneDisplay}
+              <a className="hero__trust-phone" href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>
+              <a className="hero__trust-phone" href={`tel:${SITE.phoneTelSecondary}`}>
+                {SITE.phoneDisplaySecondary}
               </a>
               <span className="hero__trust-sub">
                 Quotes, bookings &amp; shipment updates

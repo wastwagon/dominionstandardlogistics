@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <img
-            src="/assets/logo.svg"
+            src="/assets/newlogodominiologistics.png"
             width={240}
             height={63}
             alt="Dominion Standard Logistics Ltd"
@@ -49,7 +49,9 @@ export default function Footer() {
             </li>
             <li>{SITE.addressFull}</li>
             <li>
-              <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>
+              <a href={`tel:${SITE.phoneTel}`}>
+                {SITE.phoneDisplayCombined}
+              </a>
             </li>
           </ul>
         </div>

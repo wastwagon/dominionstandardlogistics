@@ -2,7 +2,10 @@
 export const SITE = {
   phoneDisplay: "+233 274 752 963",
   phoneTel: "+233274752963",
-  email: "a92070478@gmail.com",
+  phoneDisplaySecondary: "+233 504 666 487",
+  phoneTelSecondary: "+233504666487",
+  phoneDisplayCombined: "+233 274 752 963 / +233 504 666 487",
+  email: "logisticsdominion6@gmail.com",
   /** Contact cards, footer, structured data style */
   addressFull: "Lapaz, Accra, Ghana",
   /** Hero badge / emphasis */

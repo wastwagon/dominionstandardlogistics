@@ -23,7 +23,9 @@ export default function Contact() {
             <article className="contact-card">
               <h3>Call us</h3>
               <p>
-                <a href="tel:+233274752963">+233 274 752 963</a>
+                <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>
+                <br />
+                <a href={`tel:${SITE.phoneTelSecondary}`}>{SITE.phoneDisplaySecondary}</a>
               </p>
             </article>
             <article className="contact-card">
@@ -33,7 +35,7 @@ export default function Contact() {
             <article className="contact-card">
               <h3>Email</h3>
               <p>
-                <a href="mailto:a92070478@gmail.com">a92070478@gmail.com</a>
+                <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
               </p>
             </article>
             <article className="contact-card">
@@ -52,7 +54,7 @@ export default function Contact() {
             <h2 style={{ fontFamily: "var(--font-display)", fontSize: "1.35rem", margin: "0 0 1rem" }}>
               Send a message
             </h2>
-            <form action="https://formsubmit.co/a92070478@gmail.com" method="POST">
+            <form action={`https://formsubmit.co/${SITE.email}`} method="POST">
               <input type="hidden" name="_subject" value="Dominion Standard Logistics — Website enquiry" />
               <input type="hidden" name="_template" value="table" />
               <input
